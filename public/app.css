@@ -1,3 +1,86 @@
-#codelink a:hover{
-    text-decoration: none;
+body{
+    font-family: 'Source Code Pro', monospace;
 }
+
+body a:hover{
+    text-decoration: none;
+    color: rgb(144, 167, 187);
+}
+
+a{
+    color: #17A0DB;
+}
+
+#bodytext{
+    padding: 2vw;
+    color: #504e4e;
+    background-color:#f8f9fa!important;
+    font-size:larger;
+    font-weight:800;
+    line-height: 5vh;
+}
+
+.btn-primary{
+    background-color: #17A0DB ;
+    border: #17A0DB;
+    font-weight: 800;
+}
+
+.btn-primary:hover{
+  background-color: rgb(144, 167, 187);
+}
+
+.row{
+    text-align: center;
+}
+
+.productItems, .loading, #productQuantity{
+    display: none;
+}
+
+#productQuantity{
+  margin-bottom: 20px;
+}
+
+#quantityLabel{
+  background-color: #f8f9fa;
+  font-weight: 800;
+  padding: 0.8vw;
+  border-radius: 4px;
+}
+
+.quantityBtn{
+  background-color: #17A0DB;
+  color: white;
+  border-color: #17A0DB;
+}
+
+footer{
+    color: var(--light-text-color);
+    padding: 1.5%;
+    font-size: 1.1vw;
+    border-top: 1px solid rgb(214, 214, 214);
+  }
+  
+  footer ul{
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+  }
+  
+  footer li {
+    float: right;  
+    margin-right: 5%;
+  }
+  
+  /* footer  li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  } */
+  
+  footer li:hover{
+    cursor: pointer;
+  }

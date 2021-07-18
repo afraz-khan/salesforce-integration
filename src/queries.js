@@ -15,6 +15,9 @@ async function getProductItems() {
 
 async function getProductQuantity(productItemNum) {
     const quantity = await connection.query(`SELECT QuantityOnHand FROM ProductItem WHERE ProductItemNumber='${productItemNum}'`);
+    if(quantity.totalSize === 0){
+        throw new Error('Product Item not found.');
+    }
     return quantity;
 }
 

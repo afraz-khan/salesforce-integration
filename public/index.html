@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="img-src *; script-src self https://code.jquery.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com 'unsafe-inline' 'unsafe-eval';"> -->
+    <title>Salesforce Integration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css" >
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarExample01"
+              aria-controls="navbarExample01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav> -->
+        <!-- Navbar -->
+      
+        <!-- Jumbotron -->
+        <div class="p-5 text-center bg-light">
+          <h1 class="mb-3" style="color: #17A0DB;">Salesforce 
+            <span style="font-weight: bold;" > Server-to-Server </span> 
+            Integration Sample
+        </h1>
+          <h4 class="mb-3">Using OAuth2.0 JWT Bearer Flow</h4>
+          <p id="codelink" class="lead" >code@
+              <a href="https://github.com/afraz-khan/salesforce-integration">
+                github
+                <img src="./images/github.png" alt="">
+              </a>
+          </p>
+          <!-- <a class="btn btn-primary" href="" role="button">Call to action</a> -->
+        </div>
+        <!-- Jumbotron -->
+    </header>
+    <div class="container" >
+      <p id="bodytext" class="text-xl-left" >
+        This sample app has a salesforce 
+        <a href="https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm&type=5">
+          Connected App
+        </a>(supporting OAuth JWT Flow) behind the scenes which talks with salesforce rest api to access a sandbox salesforce org data. 
+        <br></br>
+        
+        Sandbox org has 
+        <a href="https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_productitem.htm">
+          ProductItems
+        </a> (Inventories) in salesforce for some dummy products.
+        2 queries are given in the code just to represent the integration flow.
+        <br></br>
+        
+        You can extend the code for your usecase.
+        
+      </p>
+
+      <div class="row" >
+        <div class="col-sm-6">
+          <button id="productItems" class="btn btn-primary" type="button">QUERY
+            <br> ( Import all ProductItems ) 
+            <img src="./images/tap.png" alt="tap here">
+          </button>
+          <br>
+          <span class='loading' >loading...</span> <br>
+          <table class="table productItems">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">ProductName</th>
+                <th scope="col">ProductItemNumber</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-6">
+          <h6 id="quantityLabel" >QUERY
+            <br>( Product Inventory Stock/ Quantity of Products )
+          </h6>
+          <div class="input-group mb-3">
+            <input id="productItemNum" type="text" class="form-control" placeholder="Enter any ProductItemNumber from left table" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary quantityBtn" type="button">Button</button>
+            </div>
+          </div>
+          <span class='loading' >loading...</span>
+          <h4 id="productQuantity" >
+            <b>Quantity in Stock:</b> 
+            <span >
+
+            </span>
+          </h4>
+
+        </div>
+      </div>
+    </div>
+    <footer >
+      @2021 afraz-khan.github.io
+      <ul >
+          <li >
+              <a href='https://www.pinterest.com/afrazkhan_/' >
+                  <img className='social-icon' src={pinterest} />
+              </a>
+          </li>
+          <li >
+              <a href='https://twitter.com/afrazkhan_' >
+                  <img className='social-icon' src={twitter} />
+              </a>
+          </li>
+          <li >
+              <a href='https://www.linkedin.com/in/afraz-khan/' >
+                  <img className='social-icon' src={linkedin} />
+              </a>
+          </li>
+          <li >
+              <a href='https://github.com/afraz-khan' >
+                  <img className='social-icon' src={github} />
+              </a>
+          </li>
+          <li >
+              <a href='https://mmm.page/afrazkhan.main' >
+                  <img className='social-icon' src={mmm} />
+              </a>
+          </li>
+          <li >
+              <a href='https://dev.to/afrazkhan' >
+                  <img className='social-icon' src={dev} />
+              </a>
+          </li>
+      </ul>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./app.js" ></script>
+</body>
+</html>
