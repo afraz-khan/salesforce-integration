@@ -1,4 +1,4 @@
-# salesforce-integration
+# salesforce-server-to-server-integration
 
 This project is a sample app for salesforce server-to-server integration using [OAuth2.0 JWT Bearer Flow](https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm&type=5).
 
@@ -16,6 +16,7 @@ Two queries are written in the code just to represent the integration flow.
 - Deploy the app to the hosting service you have.
 - Queries will start fetching data from your org.
 - For demonstration use the below section of the web page.
+  ![demonstration](https://raw.githubusercontent.com/afraz-khan/salesforce-integration/main/public/images/bottom.png)
 - You can extend the code for your usecase easily.
 
 ### Main libs
