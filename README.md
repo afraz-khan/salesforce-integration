@@ -15,7 +15,7 @@ Two queries are written in the code just to represent the integration flow.
 - Set the environment variables given in `src/ConnectAppClient.js` file for your org.
 - Deploy the app to the hosting service you have.
 - Queries will start fetching data from your org.
-- For demonstration use the below section of the web page.
+- For demonstration use the below section of the web page.  
   ![demonstration](https://raw.githubusercontent.com/afraz-khan/salesforce-integration/main/public/images/bottom.png)
 - You can extend the code for your usecase easily.
 
