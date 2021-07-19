@@ -59,27 +59,20 @@ footer{
     padding: 1.5%;
     font-size: 1.1vw;
     border-top: 1px solid rgb(214, 214, 214);
-  }
+}
   
-  footer ul{
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; 
-  }
-  
-  footer li {
-    float: right;  
-    margin-right: 5%;
-  }
-  
-  /* footer  li a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-  } */
-  
-  footer li:hover{
-    cursor: pointer;
-  }
+footer ul{
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+footer li {
+  float: right;  
+  margin-right: 5%;
+}
+footer li:hover{
+  cursor: pointer;
+}
