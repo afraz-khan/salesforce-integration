@@ -42,6 +42,12 @@ a {
   background-color: rgb(144, 167, 187);
 }
 
+mark {
+  color: #504e4e;
+  background-color: #eaf7ff;
+  border-radius: 5px;
+}
+
 .row {
   text-align: center;
 }
