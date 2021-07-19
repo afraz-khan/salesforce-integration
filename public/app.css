@@ -56,7 +56,6 @@ a{
 }
 
 footer{
-    color: var(--light-text-color);
     padding: 1.5%;
     font-size: 1.1vw;
     border-top: 1px solid rgb(214, 214, 214);
