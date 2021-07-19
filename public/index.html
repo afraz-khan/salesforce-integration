@@ -64,36 +64,40 @@
     </header>
     <div class="container" >
       <p id="bodytext" class="text-xl-left" >
-        This sample app has a salesforce 
+        This sample app connects to a salesforce 
 
         <a href="https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm&type=5">
           Connected App
-        </a>(supporting OAuth JWT Flow) behind the scenes which talks with salesforce rest api to access a sandbox salesforce org data. 
+        </a>(supporting OAuth JWT Flow) behind the scenes which talks with salesforce rest api to access salesforce data. 
         <br></br>
         
-        My sandbox org has 
-        <a href="https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_productitem.htm">
-          ProductItems
-        </a> (Inventories) in salesforce for some dummy products.
-        2 queries are written in the code just to represent the integration flow. 
+        Two queries are written in the code just to represent the integration flow. 
 				<br>
 				<span class="bodybullets" >
-					- Fetch all ProductItems
-				</span>
+					• Fetch all ProductItems
 				<br>
-				<span class="bodybullets" >
-					- Find stock/quantity of a single ProductItem
+					• Find stock/quantity of a single ProductItem
 				</span>
         <br></br>
         
-				• Setup some ProductItems in your salesforce org. <br>
-				• Set the environment variables given in <code>src/ConnectAppClient.js</code> for your org. <br>
-				• Queries will start fetching data from your org. <br>
-				• You can extend the code for your usecase. <br>
-      </p>
+				Run the code for your salesforce org: <br>
+				<span class="bodybullets" >
+					• Setup some ProductItems in your salesforce org. <br>
+					• Set the environment variables given in <code>src/ConnectAppClient.js</code> for your org. <br>
+					• Queries will start fetching data from your org. <br>
+					• You can extend the code for your usecase. <br>
+				</span>
+				<br>
 
-			<h2 id="sandboxText" >Run the Queries 👇</h2>
-			<hr>
+				<mark>
+					<i>
+						I have setup some dummy
+        		<a href="https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_productitem.htm">
+          		ProductItems
+        		</a> (Inventories) in my sandbox salesforce org for demonstration.
+					</i>👇
+				</mark>
+      </p>
       <div class="row" >
         <div class="col-sm-6">
           <button id="productItems" class="btn btn-primary" type="button">QUERY
