@@ -4,14 +4,14 @@ This project is a sample app for salesforce server-to-server integration using [
 
 ### Features
 
-Two queries are written in the code just to represent the integration flow.
+Two queries are written in the code to represent the integration flow.
 
 - Fetch all ProductItems
 - Find stock/quantity of a single ProductItem
 
 ### Quick setup
 
-- Setup some ProductItems in your salesforce org.
+- Setup some [ProductItems](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_productitem.htm) in your salesforce org.
 - Set the environment variables given in `src/ConnectAppClient.js` file for your org.
 - Deploy the app to the hosting service you have.
 - Queries will start fetching data from your org.
