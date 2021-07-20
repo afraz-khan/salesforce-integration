@@ -11,6 +11,7 @@ Two queries are written in the code to represent the integration flow.
 
 ### Quick setup
 
+- Setup a connected app in your salesforce org using this method [here](https://www.drupal.org/docs/8/modules/salesforce-suite/create-a-oauth-jwt-bearer-token-flow-connected-app-4x).
 - Setup some [ProductItems](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_productitem.htm) in your salesforce org.
 - Set the environment variables given in `src/ConnectAppClient.js` file for your org.
 - Deploy the app to the hosting service you have.
