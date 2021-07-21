@@ -1,6 +1,6 @@
 # salesforce-server-to-server-integration
 
-This project is a sample app for salesforce server-to-server integration using [OAuth2.0 JWT Bearer Flow](https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm&type=5).
+A startup for salesforce server-to-server integration using [OAuth2.0 JWT Bearer Flow](https://help.salesforce.com/articleView?id=sf.remoteaccess_oauth_jwt_flow.htm&type=5).
 
 ### Features
 
