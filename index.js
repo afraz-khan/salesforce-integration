@@ -46,8 +46,20 @@ router.get('/:productItemNum', async (req, res) => {
 })
 
 app.use(compression())
-app.use(helmet())
-app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      'script-src': [
+        "'self'",
+        'code.jquery.com',
+        'cdnjs.cloudflare.com',
+        'stackpath.bootstrapcdn.com',
+      ],
+    },
+  }),
+)
+app.use('/', express.static(path.join(__dirname + '/client/build')))
 app.use('/productItems', router)
 app.listen(PORT, () => {
   console.log('Server Started on ' + HOST + ' on port ' + PORT)
