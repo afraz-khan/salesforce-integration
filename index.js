@@ -57,6 +57,11 @@ app.use(
     },
   }),
 )
+app.use(
+  helmet.crossOriginResourcePolicy({
+    policy: 'cross-origin',
+  }),
+)
 app.use('/', express.static(path.join(__dirname + '/client/build')))
 app.use('/productItems', router)
 app.listen(PORT, () => {
