@@ -12,6 +12,7 @@ const router = express.Router('/productItems')
 
 // get all product Items.
 router.get('/', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
   try {
     const productItems = await getProductItems()
     const responseData = productItems['records'].map((item) => {
@@ -29,6 +30,7 @@ router.get('/', async (req, res) => {
 
 // get stock for a single productitem
 router.get('/:productItemNum', async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
   try {
     const quantity = await getProductQuantity(req.params.productItemNum)
     const responseData = {
@@ -55,11 +57,6 @@ app.use(
         'stackpath.bootstrapcdn.com',
       ],
     },
-  }),
-)
-app.use(
-  helmet.crossOriginResourcePolicy({
-    policy: 'cross-origin',
   }),
 )
 app.use('/', express.static(path.join(__dirname + '/client/build')))
