@@ -6,8 +6,6 @@ const path = require('path')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT
-// const HOST = 'localhost'
-// const PORT = process.env.PORT || 3001
 
 const app = express()
 const router = express.Router('/productItems')
