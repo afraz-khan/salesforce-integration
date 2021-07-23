@@ -1,0 +1,106 @@
+body {
+  font-family: 'Source Code Pro', monospace;
+}
+
+body a:hover {
+  text-decoration: none;
+  color: rgb(144, 167, 187);
+}
+
+a {
+  color: #17a0db;
+}
+
+header h1 {
+  color: #17a0db;
+}
+
+header h1 span {
+  font-weight: bold;
+}
+
+#bodytext {
+  padding: 2vw;
+  color: #504e4e;
+  background-color: #f8f9fa !important;
+  font-size: larger;
+  font-weight: 800;
+  line-height: 5vh;
+}
+
+.bodybullets {
+  line-height: 1vw;
+  font-size: medium;
+  font-weight: 400;
+}
+
+#sandboxText {
+  color: #504e4e;
+  text-align: center;
+  padding: 0.5vw;
+}
+
+.btn-primary {
+  background-color: #17a0db;
+  border: #17a0db;
+  font-weight: 800;
+}
+
+.btn-primary:hover {
+  background-color: rgb(144, 167, 187);
+}
+
+mark {
+  color: #504e4e;
+  background-color: #eaf7ff;
+  border-radius: 5px;
+}
+
+.row {
+  text-align: center;
+}
+
+.productItems,
+.loading,
+#productQuantity {
+  display: none;
+}
+
+#productQuantity {
+  margin-bottom: 20px;
+}
+
+#quantityLabel {
+  background-color: #f8f9fa;
+  font-weight: 800;
+  padding: 0.8vw;
+  border-radius: 4px;
+}
+
+.quantityBtn {
+  background-color: #17a0db;
+  color: white;
+  border-color: #17a0db;
+}
+
+footer {
+  padding: 1.5%;
+  font-size: 1.1vw;
+  border-top: 1px solid rgb(214, 214, 214);
+}
+
+footer ul {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+footer li {
+  float: right;
+  margin-right: 5%;
+}
+footer li:hover {
+  cursor: pointer;
+}

@@ -4,8 +4,10 @@ const compression = require('compression')
 const helmet = require('helmet')
 const path = require('path')
 
-const HOST = process.env.HOST
-const PORT = process.env.PORT
+// const HOST = process.env.HOST
+// const PORT = process.env.PORT
+const HOST = 'localhost'
+const PORT = process.env.PORT || 3001
 
 const app = express()
 const router = express.Router('/productItems')
@@ -45,7 +47,7 @@ router.get('/:productItemNum', async (req, res) => {
 
 app.use(compression())
 app.use(helmet())
-app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/', express.static(path.join(__dirname, 'client', 'build')))
 app.use('/productItems', router)
 app.listen(PORT, () => {
   console.log('Server Started on ' + HOST + ' on port ' + PORT)
