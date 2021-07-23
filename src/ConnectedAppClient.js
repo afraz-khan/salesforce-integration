@@ -14,11 +14,7 @@ module.exports.ConnectedAppClient = async () => {
     iss: '3MVG9fe4g9fhX0E7T9UDCEjGUAP2mCUyVuoSgjELc0yg1sAcjP_NZ16ecPDVsW04_MkXtWuJiLKo4j9rHhP9b',
     sub: 'me@afrazkhan.com',
     aud: 'https://login.salesforce.com',
-    privateKey: fs
-      .readFileSync(
-        '/home/afrazkhan/work/salesforce-integration/src/server.key',
-      )
-      .toString('utf-8'),
+    privateKey: fs.readFileSync(__dirname + '/server.key').toString('utf-8'),
   })
 
   conn.initialize({
