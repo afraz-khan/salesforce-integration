@@ -17,7 +17,7 @@ Two queries are written in the code to represent the integration flow.
 - Deploy the app to the hosting service you have.
 - Queries will start fetching data from your org.
 - For demonstration use the below section of the web page.
-  ![demonstration](/public/images/bottom.png)
+  ![demonstration](/client/src/images/bottom.png)
 - You can extend the code for your usecase easily.
 
 ### Main libs
